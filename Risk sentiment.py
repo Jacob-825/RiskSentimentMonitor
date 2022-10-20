@@ -63,3 +63,7 @@ dataframe['Relative Direction'] = directions
 
 #Append mean to identify overall market risk sentiment
 pd.concat([dataframe, pd.DataFrame([dataframe['Relative Direction'].mean()], columns=['Relative Direction'], index=["Overall risk sentiment"])])
+
+risksentiment = pd.concat([dataframe, pd.DataFrame([dataframe['Relative Direction'].mean()], columns=['Relative Direction'], index=["Overall risk sentiment"])])
+
+print(risksentiment)
